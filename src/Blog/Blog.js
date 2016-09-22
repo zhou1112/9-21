@@ -1,19 +1,27 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+
+import BlogZ from '../components/BlogZhmo';
+import BlogCard from '../components/BlogCard'
 
 class Blog extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+    bian:true
+  }
+  }
+  handleClick(){
+    console.log(111)
+    this.setState({
+      bian:false
+    })
+  }
   render () {
     return(
-      <div className="Blog">
-        <div className="zz">
-        <h3>
-          <p>welcome to my blog</p>
-          <p>I extend my sincere greetings to you.</p>
-        
-        </h3>
+      <div className="Blog" onClick={this.handleClick.bind(this)}>
+      {this.state.bian ? <BlogZ /> : '<BlogCard />'}
 
-        </div>
-
-      </div>
+    </div>
     )
   }
 }
