@@ -11,7 +11,7 @@ class Blog extends React.Component {
   }
   }
   handleClick(){
-    console.log(111)
+
     this.setState({
       bian:false
     })
@@ -19,7 +19,7 @@ class Blog extends React.Component {
   render () {
     return(
       <div className="Blog" onClick={this.handleClick.bind(this)}>
-      {this.state.bian ? <BlogZ /> : '<BlogCard />'}
+      {this.state.bian ? <BlogZ /> : <BlogCard />}
 
     </div>
     )
