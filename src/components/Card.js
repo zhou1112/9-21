@@ -6,7 +6,7 @@ class Card extends React.Component {
   render () {
     return(
       <div className="col-xs-6 col-sm-4">
-        <div className="thumbnail">
+        <div className="thumbnail" style={{backgroundColor:'rgba(350,200,300,1)'}}>
           <img src={this.props.img} alt="..."/>
           <div className="caption">
             <h3>{this.props.title}</h3>

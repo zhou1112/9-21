@@ -1,12 +1,12 @@
 
 import React, { PropTypes } from 'react';
-
+import { hashHistory } from 'react-router';
 import { Link } from 'react-router';
 import bg from '../images/12.jpg';
 class BlogCardDate extends React.Component {
   handleJump(){
     let address = this.props.url;
-    hashHistory.push(`/Item/${address}`)
+    hashHistory.push(`/item/${address}`)
   }
   render () {
     let styles = {
@@ -51,7 +51,7 @@ class BlogCardDate extends React.Component {
         lineHeight:'50px'
       }
     }
-      
+      let address = `item/${this.props.url}`;
     return(
         <div style={styles.box}>
           <div style={styles.title}>

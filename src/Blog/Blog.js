@@ -19,7 +19,7 @@ class Blog extends React.Component {
   render () {
     return(
       <div className="Blog" onClick={this.handleClick.bind(this)}>
-      {this.state.bian ? <BlogZ /> : <BlogCard />}
+      <BlogCard />
 
     </div>
     )

@@ -23,15 +23,14 @@ class Item extends React.Component {
       });
   }
   render () {
-    let content = this.state.wait ? '~亲· 稍等' : marked(this.state.data)
     marked.setOptions({
       highlight: function (code) {
         return Hs.highlightAuto(code).value;
-          }
-      });
+      }
+    });
     return(
-      <div>
-        <div dangerouslySetInnerHTML={{__html:content}} className="post-content"/>
+      <div className="post-content">
+        {this.state.wait ? '请稍等' : <div dangerouslySetInnerHTML={{__html: marked(this.state.data)}} />}
       </div>
     )
   }
