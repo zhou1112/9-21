@@ -8,10 +8,10 @@ class Card extends React.Component {
       <div className="col-xs-6 col-sm-4">
         <div className="thumbnail" style={{backgroundColor:'rgba(350,200,300,1)'}}>
           <img src={this.props.img} alt="..."/>
-          <div className="caption">
+          <div className="caption" style={{textAlign:'center'}}>
             <h3>{this.props.title}</h3>
             <p>{this.props.desc}</p>
-            <p><a className="btn btn-primary" role="button">Button</a></p>
+            <p><a className="btn btn-primary" role="button" href={this.props.href}>Button</a></p>
           </div>
         </div>
       </div>
@@ -21,6 +21,7 @@ class Card extends React.Component {
 Card.defaultProps={
   title:'我是标题',
   desc:'我是描述',
-  img:'http://img15.3lian.com/2015/f1/155/d/75.jpg'
+  img:'http://img15.3lian.com/2015/f1/155/d/75.jpg',
+  href:''
 }
 export default Card;
